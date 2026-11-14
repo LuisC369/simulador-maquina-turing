@@ -1,0 +1,13 @@
+// Acepta las cadenas de a's cuya longitud es multiplo de 3: { a^3n | n >= 0 }
+Estados( q0, q1, q2 )
+Inicial( q0 )
+Ha( ha )
+He( he )
+Alfabeto( a )
+Blanco( _ )
+MT (q0, a) = (q1, a, D)
+MT (q1, a) = (q2, a, D)
+MT (q2, a) = (q0, a, D)
+MT (q0, _) = (ha, _, N)
+MT (q1, _) = (he, _, N)
+MT (q2, _) = (he, _, N)
